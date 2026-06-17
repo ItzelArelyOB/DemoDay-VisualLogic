@@ -293,7 +293,7 @@ td:first-child { color:var(--blanco); font-weight:500; }
   .anim-caption {
     position:absolute;
     left:50%;
-    top:8%;
+    top:90px;
     transform: translate(-50%, -10px);
     font-family:'Barlow Condensed', sans-serif;
     font-weight:700;
@@ -311,14 +311,22 @@ td:first-child { color:var(--blanco); font-weight:500; }
 
   /* clock */
   .anim-clock-wrap {
-    position:absolute;
-    top:6%;
-    right:6%;
+    width:auto;
     display:flex;
+    flex-direction:row;
     align-items:center;
-    gap:10px;
-    opacity:0;
-    z-index:40;
+    justify-content:flex-end;
+    gap:18px;
+    white-space:nowrap;
+    line-height:0;
+  }
+
+  .anim-clock-wrap svg {
+    position:relative;
+    flex-shrink:0;
+    display:block;
+    width:36px;
+    height:36px;
   }
   .anim-clock-time {
     font-family:'Barlow Condensed', sans-serif;
@@ -1109,24 +1117,6 @@ td:first-child { color:var(--blanco); font-weight:500; }
   </div>
 
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-
-    <div class="card" style="padding:16px 20px;border-left:3px solid var(--amarillo);border-radius:0 3px 3px 0;">
-      <div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gris2);margin-bottom:10px;">Aplicado a VisualLogic — escenario real</div>
-      <div style="display:flex;flex-direction:column;gap:7px;">
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 10px;background:rgba(192,57,43,.08);border-radius:3px;">
-          <span style="font-size:15px;color:var(--gris);">Sin agente — Revenue en riesgo</span>
-          <span style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px;color:var(--rojo);">$1,420,000 MXN</span>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 10px;background:rgba(30,132,73,.08);border-radius:3px;">
-          <span style="font-size:15px;color:var(--gris);">Protegido con detección proactiva</span>
-          <span style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px;color:var(--verde);">$1,420,000 MXN</span>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 10px;background:rgba(30,132,73,.08);border-radius:3px;">
-          <span style="font-size:15px;color:var(--gris);">Ahorro estimado en reparaciones / año</span>
-          <span style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px;color:var(--verde);">~$300K MXN</span>
-        </div>
-      </div>
-    </div>
 
     <div class="card" style="padding:16px 20px;">
       <div style="font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gris2);margin-bottom:10px;">Beneficios de visualizar en tiempo real</div>
